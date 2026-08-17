@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tender-scraper
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: SCRAPER_PORT
+        value: 8081
